@@ -22,7 +22,6 @@ Traditional restoration is labor-intensive, expensive, and subjective. Our syste
 ---
 
 ## Project Structure
-.
 ├── diffusion-restoration.py          # Full DDPM restoration pipeline           
 ├── GenerateDegradation.py           # Custom degradation module           
 ├── image_inference.py               # Script for inference using saved checkpoints           
@@ -39,7 +38,7 @@ Traditional restoration is labor-intensive, expensive, and subjective. Our syste
 - **Content**: 8,000+ classical and modern paintings
 - **Preprocessing**:
   - Center crop + resize (256×256 or 128×128)
-  - Normalization to \`[-1, 1]\`
+  - Normalization to [-1, 1]
   - Train/Val/Test split: 70/15/15
 
 ---
@@ -59,7 +58,9 @@ Implemented in `GenerateDegradation.py`:
 
 Apply either single or combined degradations using:
 bash
-python GenerateDegradation.py --input_dir artworks/ --degradation_type multiple
+python GenerateDegradation.py 
+--input_dir artworks
+--degradation_type multiple
 
 ---
 
@@ -96,7 +97,6 @@ python
 from ImageQualityEvaluator import evaluate_images
 evaluate_images(test_dir='restored/', reference_dir='clean/')
 
-
 ---
 
 ## How to Run
@@ -106,23 +106,23 @@ evaluate_images(test_dir='restored/', reference_dir='clean/')
 bash
 python diffusion-restoration.py
 
-
 You can optionally modify:
-- \`EPOCHS\`, \`TIMESTEPS\`, \`BATCH_SIZE\`
-- Noise schedule: \`BETA_START\`, \`BETA_END\`
+- EPOCHS, TIMESTEPS, BATCH_SIZE
+- Noise schedule: BETA_START, BETA_END
 
 ### Inference on New Images
 
 bash
-python image_inference.py --checkpoint best_diffusion_model.pth --image_dir ./degraded/
-
+python image_inference.py 
+--checkpoint best_diffusion_model.pth 
+--image_dir ./degraded/
 
 ### Advanced Artifact-Aware Restoration
 
 bash
-python SAClipAutoDirModel.py --input artwork.jpg --process-all
-
-
+python SAClipAutoDirModel.py 
+--input artwork.jpg 
+--process-all
 ---
 
 ## Results Summary
@@ -147,7 +147,7 @@ python SAClipAutoDirModel.py --input artwork.jpg --process-all
 
 ---
 
-## 📎 Citation & Acknowledgments
+## Citation & Acknowledgments
 
 This project was developed as part of **11-785: Intro to Deep Learning** at **Carnegie Mellon University**, Spring 2025.  
 
