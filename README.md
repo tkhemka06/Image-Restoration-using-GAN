@@ -23,13 +23,13 @@ Traditional restoration is labor-intensive, expensive, and subjective. Our syste
 
 ## Project Structure
 .
-├── diffusion-restoration.py          # Full DDPM restoration pipeline
-├── GenerateDegradation.py           # Custom degradation module
-├── image_inference.py               # Script for inference using saved checkpoints
-├── SAClipAutoDirModel.py            # Advanced restoration using artifact-aware CLIP
-├── ImageQualityEvaluator.py         # PSNR & SSIM evaluation module
-├── MLPS_Project_Final_code.ipynb    # GAN and UNet-based model experiments
-├── README.md                        # You're here!
+├── diffusion-restoration.py          # Full DDPM restoration pipeline           
+├── GenerateDegradation.py           # Custom degradation module           
+├── image_inference.py               # Script for inference using saved checkpoints           
+├── SAClipAutoDirModel.py            # Advanced restoration using artifact-aware CLIP           
+├── ImageQualityEvaluator.py         # PSNR & SSIM evaluation module            
+├── MLPS_Project_Final_code.ipynb    # GAN and UNet-based model experiments           
+├── README.md                                 
 
 ---
 
@@ -58,9 +58,8 @@ Implemented in `GenerateDegradation.py`:
 - Dust particles
 
 Apply either single or combined degradations using:
-\`\`\`bash
+bash
 python GenerateDegradation.py --input_dir artworks/ --degradation_type multiple
-\`\`\`
 
 ---
 
@@ -93,10 +92,10 @@ Implemented in `ImageQualityEvaluator.py`:
 - Summary stats: mean, std, range
 
 Example usage:
-\`\`\`python
+python
 from ImageQualityEvaluator import evaluate_images
 evaluate_images(test_dir='restored/', reference_dir='clean/')
-\`\`\`
+
 
 ---
 
@@ -104,9 +103,9 @@ evaluate_images(test_dir='restored/', reference_dir='clean/')
 
 ### Train the Diffusion Model
 
-\`\`\`bash
+bash
 python diffusion-restoration.py
-\`\`\`
+
 
 You can optionally modify:
 - \`EPOCHS\`, \`TIMESTEPS\`, \`BATCH_SIZE\`
@@ -114,15 +113,15 @@ You can optionally modify:
 
 ### Inference on New Images
 
-\`\`\`bash
+bash
 python image_inference.py --checkpoint best_diffusion_model.pth --image_dir ./degraded/
-\`\`\`
+
 
 ### Advanced Artifact-Aware Restoration
 
-\`\`\`bash
+bash
 python SAClipAutoDirModel.py --input artwork.jpg --process-all
-\`\`\`
+
 
 ---
 
