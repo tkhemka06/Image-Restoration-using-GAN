@@ -22,8 +22,6 @@ Traditional restoration is labor-intensive, expensive, and subjective. Our syste
 ---
 
 ## Project Structure
-
-\`\`\`
 .
 ├── diffusion-restoration.py          # Full DDPM restoration pipeline
 ├── GenerateDegradation.py           # Custom degradation module
@@ -32,7 +30,6 @@ Traditional restoration is labor-intensive, expensive, and subjective. Our syste
 ├── ImageQualityEvaluator.py         # PSNR & SSIM evaluation module
 ├── MLPS_Project_Final_code.ipynb    # GAN and UNet-based model experiments
 ├── README.md                        # You're here!
-\`\`\`
 
 ---
 
