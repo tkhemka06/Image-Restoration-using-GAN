@@ -22,12 +22,12 @@ Traditional restoration is labor-intensive, expensive, and subjective. Our syste
 ---
 
 ## Project Structure
-├── diffusion-restoration.py          # Full DDPM restoration pipeline           
-├── GenerateDegradation.py           # Custom degradation module           
-├── image_inference.py               # Script for inference using saved checkpoints           
-├── SAClipAutoDirModel.py            # Advanced restoration using artifact-aware CLIP           
-├── ImageQualityEvaluator.py         # PSNR & SSIM evaluation module            
-├── MLPS_Project_Final_code.ipynb    # GAN and UNet-based model experiments           
+├── diffusion-restoration.py              # Full DDPM restoration pipeline           
+├── GenerateDegradation.py                # Custom degradation module           
+├── image_inference.py                    # Script for inference using saved checkpoints           
+├── SAClipAutoDirModel.py                 # Advanced restoration using artifact-aware CLIP           
+├── ImageQualityEvaluator.py              # PSNR & SSIM evaluation module            
+├── MLPS_Project_Final_code.ipynb         # GAN and UNet-based model experiments           
 ├── README.md                                 
 
 ---
