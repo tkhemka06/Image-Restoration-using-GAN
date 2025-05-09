@@ -92,19 +92,13 @@ Implemented in `ImageQualityEvaluator.py`:
 - **Visualization plots**
 - Summary stats: mean, std, range
 
-Example usage:
-python
-from ImageQualityEvaluator import evaluate_images
-evaluate_images(test_dir='restored/', reference_dir='clean/')
-
 ---
 
 ## How to Run
 
 ### Train the Diffusion Model
 
-bash
-python diffusion-restoration.py
+bash python diffusion-restoration.py
 
 You can optionally modify:
 - EPOCHS, TIMESTEPS, BATCH_SIZE
@@ -112,17 +106,16 @@ You can optionally modify:
 
 ### Inference on New Images
 
-bash
-python image_inference.py 
+bash python image_inference.py 
 --checkpoint best_diffusion_model.pth 
 --image_dir ./degraded/
 
 ### Advanced Artifact-Aware Restoration
 
-bash
-python SAClipAutoDirModel.py 
+bash python SAClipAutoDirModel.py 
 --input artwork.jpg 
 --process-all
+
 ---
 
 ## Results Summary
@@ -143,7 +136,6 @@ python SAClipAutoDirModel.py
 - use GAN + Diffusion in a hybrid architecture
 - Add **style preservation** loss to keep artistic intent
 - Human-in-the-loop: let curators refine ambiguous restorations
-- Incorporate LPIPS or user studies for perceptual evaluation
 
 ---
 
